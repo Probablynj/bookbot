@@ -1,19 +1,11 @@
-def get_book_text(f):
-    with open(f) as f:
-        file_contents = f.read()
-    return file_contents
-
-def accept_text():
-    text = get_book_text("books/frankenstein.txt")
-    words = text.split()
-    amount = len(words)
-    return amount
-    
+from stats import accept_text
+from stats import get_character_num
 
 def main():
     result = accept_text()
+    letters_result = get_character_num(result)
     print(f"{result} words found in the document")
-
-   
+    print(letters_result)
+    
 
 main()
